@@ -4,4 +4,4 @@ This is a basic html, javascript, and css site that calculates a "Power Map". A 
 
 # Installation
 
-There are no dependencies. This site should be able to run just after downloading. The current version of this site is hosted at chadmccolm.ca/powermapper/
+There are no dependencies. This site should be able to run just after downloading. The current version of this site is hosted at [chadmccolm.ca/powermapper](chadmccolm.ca/powermapper/).
