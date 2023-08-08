@@ -9,14 +9,16 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.7.0.min.js"></script> 
+    <script src="js/Chart.js_4.3.3_chart.min.js"></script>
 </head>
 <body>
     <div class="flexbox flexdown" id="main">
         <div class="flexbox flexdown card">
-            <span class="">Chad's</span>
-            <span class="">Power Mapper</span>
+            <span class="subtitle">Chad's</span>
+            <span class="title">Power Mapper</span>
         </div>
-        <div class="flexbox flexright card">
+        <div class="flexbox flexright card nav">
+            <a href="#">Home</a>
             <a href="#">Load</a>
             <a href="#">Compare</a>
             <a href="#">About</a>
@@ -29,20 +31,20 @@
                 <span>Wheel Size</span><input  type="number"/><span>in</span>
                 <span>Calculated OD</span><input disabled value=""/><span>m</span>
                 <span>Override?</span><input type="checkbox"/><span>-</span>
-                <span>Override OD</span><input  type="number"/><span>m</span>
+                <span>Override OD</span><input disabled type="number"/><span>m</span>
             </div>
         </div>
         <div class="flexbox flexdown card">
             <div class="">Final Drive</div>
             <div class="grid">
                 <span>Geared?</span><input type="checkbox"/><span>-</span>
-                <span>Ratio</span><input  type="number"/><span>-</span>
+                <span>Ratio</span><input disabled type="number"/><span>-</span>
                 <span>Chained?</span><input type="checkbox"/><span>-</span>
-                <span>Input Teeth</span><input  type="number"/><span>-</span>
-                <span>Output Teeth</span><input  type="number"/><span>-</span>
+                <span>Input Teeth</span><input disabled type="number"/><span>-</span>
+                <span>Output Teeth</span><input disabled type="number"/><span>-</span>
                 <span>Calculated Ratio</span><input disabled value=""/><span>-</span>
                 <span>Override?</span><input type="checkbox"/><span>-</span>
-                <span>Override Ratio</span><input  type="number"/><span>-</span>
+                <span>Override Ratio</span><input disabled type="number"/><span>-</span>
             </div>
         </div>
         <div class="flexbox flexdown card">
@@ -53,15 +55,29 @@
                 <span>2nd</span><input type="number"/><span>-</span>
                 <span>3rd</span><input  type="number"/><span>-</span>
                 <span>4th</span><input  type="number"/><span>-</span>
+                <input type="button" value="Add Another Gear" />
+                <input type="button" value="Remove Unfilled Gears" />
             </div>
-            <input type="button" value="Add Another Gear" />
-            <input type="button" value="Remove Unfilled Gears" />
         </div>
         <div class="flexbox flexdown card">
             <div class="">Dyno Data</div>
             <div>Please paste your dyno data below from Microsoft Excel. The first column should be RPM and the second should be horsepower. </div>
             <textarea id="excel-data"></textarea>
             <!-- https://stackoverflow.com/questions/2006468/copy-paste-from-excel-to-a-web-page -->
+        </div>
+        <div class="flexbox flexdown">
+            <input type="button" id="majorbutton" value="Generate Maps" />
+        </div>
+        <div class="flexbox flexdown card">
+            <div class="">Gearing Map</div>
+            <canvas id="gearingmap"></canvas>
+        </div>
+        <div class="flexbox flexdown card">
+            <div class="">Power Map</div>
+            <canvas id="powermap"></canvas>
+        </div>
+        <div class="flexbox flexdown">
+            <input type="button" id="majorbutton" value="Save Data" />
         </div>
     </div>
 </body>
