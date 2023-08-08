@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted red; */
+    font-family: sans-serif;
+}
+.flexbox{
+    display: flex;
+}
+.flexright{
+    flex-direction: row;
+}
+.flexdown{
+    flex-direction: column;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+}
+#main{
+    width: 800px;
+    min-height:100px;
+    margin:auto;
+}
+#main > *{
+    margin: 5px 0px;
+}
+input{
+    text-align: center;
+}
+div.card{
+    padding: 10px; 
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+div.card > div:first-child{
+    font-size:1.5em;
+}
+textarea#excel-data{
+    height:200px;
+}
